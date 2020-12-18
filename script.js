@@ -19,12 +19,25 @@ gunting.addEventListener("click",function () {
 function win(player) {
     let comp = countComp()
     let comp_display = document.getElementsByClassName('comp')
+    let comp_kertas = document.getElementById("comp-kertas")
+    let comp_batu = document.getElementById("comp-batu")
+    let comp_gunting = document.getElementById("comp-gunting")
     console.log(comp_display);
     // console.log(player, 'ini player');
     // console.log(comp, 'ini computer');
+    comp_gunting.style.display = "none"
+    comp_batu.style.display = "none"
+    comp_kertas.style.display = "none"
+    if (comp === 'gunting') {
+        comp_gunting.style.display = "block"
+    } else if (comp === 'batu') {
+        comp_batu.style.display = "block"
+    } else if (comp === 'kertas') {
+        comp_kertas.style.display = "block"
+    }
+
     if (player === comp) {
-        comp_display.style.display = "block"
-        return `draw `
+        return `draw`
     }else if (player === 'kertas' && comp === 'batu') {
         return `menang`
     }else if (player === 'kertas' && comp === 'gunting') {
