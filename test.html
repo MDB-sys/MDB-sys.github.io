@@ -1,0 +1,26 @@
+<html>
+  <head></head>
+  <body>
+    <div>
+      <p id="paragraph1">
+        <b>Acong</b> adalah teman dari <b>Djoko</b> dan <b>Sitorus</b>.
+      </p>
+      <p id="paragraph2">
+        <b>Djoko</b> dan <b>Sitorus</b> sangat peduli terhadap <b>Acong</b>.
+      </p>
+      <button id="button1" onclick="button1()">Button 1</button> <!--Cara 1 dengan menuliskan onclick attribute pada element HTML-->
+      <button id="button2">Button 2</button>
+    </div>
+
+    <script>
+      function button1() {
+        document.getElementById("paragraph1").innerHTML = '<b>Acong</b> sudah tidak berteman baik dengan <b>Djoko</b> maupun <b>Sitorus</b>.';
+      }
+      function button2() {
+        document.getElementById("paragraph2").innerHTML = 'Persahabatan <b>Acong</b>, <b>Djoko</b> dan <b>Sitorus</b> kandas karena masalah jodoh.';
+      }
+      let button2Object = document.getElementById("button2");
+      button2Object.addEventListener("click", button2); // Cara 2 dengan menggunakan function addEventListener
+    </script>
+  </body>
+</html>
